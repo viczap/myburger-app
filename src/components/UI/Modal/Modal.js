@@ -7,7 +7,8 @@ class Modal extends Component {
 
     //The children component should be updated just if the show property is set as true.
     shouldComponentUpdate(prevProps, prevState) {
-        return prevProps.show !== this.props.show;
+        return prevProps.show !== this.props.show 
+            || prevProps.children !== this.props.children;
     }
 
     render() {
